@@ -1,5 +1,8 @@
 {
-  "name": "Dynamic Personal Portfolio",
-  "description": "A dynamic and modern personal website to showcase your profile and services. It features sections for 'About Me' and 'Services' with a clean, professional design.",
-  "requestFramePermissions": []
+  "name": "Darren-Ross.com",
+  "description": "Personal Website",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
 }
