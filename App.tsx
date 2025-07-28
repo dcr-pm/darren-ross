@@ -20,8 +20,10 @@ const App: React.FC = () => {
         </Routes>
       </main>
       <Footer />
+      <elevenlabs-convai agent-id="agent_8901k17b9zxvfp3rey53t7bfg67w"></elevenlabs-convai>
     </div>
   );
 };
 
 export default App;
+
