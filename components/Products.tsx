@@ -8,8 +8,8 @@ import { ExternalLinkIcon } from './IconComponents';
 const productsData = [
   {
     iconUrl: 'https://placehold.co/128x128/0D9488/F1F5F9?text=P1',
-    name: 'Project Alpha',
-    description: 'A revolutionary tool for data visualization, built with D3.js and React, offering interactive charts and real-time updates.',
+    name: 'MarketingCloud Quizzer',
+    description: 'The MarketingCloud Quizzer is an engaging quiz game for SFMC professionals, architected as a lightning-fast, self-contained React single-page application (SPA) with a built-in question bank for zero-latency, offline-capable fun.',
     link: '#',
   },
   {
