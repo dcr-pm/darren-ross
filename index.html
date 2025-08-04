@@ -3,48 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <title>MarketingCloud Quizzer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-primary': '#0D9488', // Teal-600
-              'brand-secondary': '#14B8A6', // Teal-500
-              'base-100': '#0F172A', // Slate-900
-              'base-200': '#1E293B', // Slate-800
-              'base-300': '#334155', // Slate-700
-              'text-primary': '#F1F5F9', // Slate-100
-              'text-secondary': '#94A3B8', // Slate-400
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-            },
-          },
-        },
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
       }
-    </script>
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      .font-certificate {
+        font-family: 'Great Vibes', cursive;
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/",
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.7.0"
+    "react/": "https://esm.sh/react@^18.2.0/",
+    "react": "https://esm.sh/react@^18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@^18.2.0/client",
+    "html2canvas": "https://esm.sh/html2canvas@1.4.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
   }
 }
 </script>
 </head>
-  <body class="bg-base-100 text-text-primary">
+  <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
