@@ -1,8 +1,0 @@
-# File: netlify.toml
-
-# This rule makes the content in the /mcquizzer folder
-# available at the /mcquizzer URL path without changing the address.
-[[redirects]]
-  from = "/mcquizzer/*"
-  to = "/mcquizzer/:splat"
-  status = 200
