@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
@@ -5,19 +6,6 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Services from './components/Services';
 import Products from './components/Products';
-
-// Fix for TypeScript error: "Property 'elevenlabs-convai' does not exist on type 'JSX.IntrinsicElements'".
-// The type declaration for this custom element is placed here to ensure it's recognized by the TypeScript compiler,
-// as the original custom.d.ts file may not be included in the build scope.
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        'agent-id': string;
-      };
-    }
-  }
-}
 
 const App: React.FC = () => {
   return (
