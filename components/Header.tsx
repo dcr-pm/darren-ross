@@ -1,57 +1,48 @@
-
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { PersonIcon } from './IconComponents';
+import { Player, GameScreen } from '../types.ts';
 
-const Header: React.FC = () => {
-  const navLinkClasses = ({ isActive }: { isActive: boolean }): string => {
-    const baseClasses = 'px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300';
-    return isActive
-      ? `${baseClasses} bg-brand-primary text-white`
-      : `${baseClasses} text-text-secondary hover:bg-base-300 hover:text-text-primary`;
-  };
+interface HeaderProps {
+  player: Player | null;
+  onNavigateToCategories: () => void;
+  screen: GameScreen;
+}
+
+const Header: React.FC<HeaderProps> = ({ player, onNavigateToCategories, screen }) => {
+  // Show the button if a player exists and they are NOT on the initial screens or the category selection screen itself.
+  const showHomeButton = player && !['welcome', 'name_entry', 'category_selection'].includes(screen);
 
   return (
-    <header className="bg-base-200/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <NavLink to="/about" className="flex-shrink-0 flex items-center gap-2 text-white text-xl font-bold">
-              <PersonIcon className="h-8 w-8 text-brand-secondary" />
-              <span>Darren</span>
-            </NavLink>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink to="/about" className={navLinkClasses}>
-                About Me
-              </NavLink>
-              <NavLink to="/services" className={navLinkClasses}>
-                Services
-              </NavLink>
-              <NavLink to="/products" className={navLinkClasses}>
-                Products
-              </NavLink>
+    <header className="sticky top-0 z-30 bg-gray-900 bg-opacity-80 backdrop-blur-md shadow-lg text-white p-3 sm:p-4 flex justify-between items-center">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <i className="fa-solid fa-cloud text-2xl sm:text-3xl text-[#0F79AF]"></i>
+        <h1 className="text-lg sm:text-xl md:text-2xl font-bold">MarketingCloud Quizzer</h1>
+      </div>
+      
+      <div className="flex items-center gap-2 sm:gap-4">
+        {showHomeButton && (
+          <button
+            onClick={onNavigateToCategories}
+            className="bg-gray-700/80 hover:bg-gray-600/80 text-white font-bold h-9 w-9 sm:h-10 sm:w-10 flex items-center justify-center rounded-full shadow-md transition-colors duration-200"
+            title="Back to Categories"
+          >
+            <i className="fa-solid fa-grip-vertical"></i>
+          </button>
+        )}
+
+        {player && (
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="text-right">
+              <span className="font-bold text-base sm:text-lg block truncate max-w-[100px] sm:max-w-[150px]">{player.name}</span>
+              <div className="text-xs sm:text-sm text-gray-300">
+                <span>Level: {player.level}</span>
+              </div>
+            </div>
+            <div className="flex items-center bg-gradient-to-r from-blue-500 to-teal-400 text-white font-bold py-2 px-3 sm:px-4 rounded-full shadow-md text-sm sm:text-base">
+              <i className="fa-solid fa-star mr-1 sm:mr-2"></i>
+              <span>{player.points}</span>
             </div>
           </div>
-          <div className="md:hidden">
-             {/* Mobile menu button could go here */}
-          </div>
-        </div>
-      </nav>
-       {/* Mobile menu, not shown by default but can be expanded */}
-       <div className="md:hidden border-t border-base-300">
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex justify-around">
-          <NavLink to="/about" className={navLinkClasses}>
-            About Me
-          </NavLink>
-          <NavLink to="/services" className={navLinkClasses}>
-            Services
-          </NavLink>
-          <NavLink to="/products" className={navLinkClasses}>
-            Products
-          </NavLink>
-        </div>
+        )}
       </div>
     </header>
   );
