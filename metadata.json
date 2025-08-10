@@ -1,0 +1,8 @@
+{
+  "name": "Darren-Ross.com",
+  "description": "Personal Website",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}
