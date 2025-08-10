@@ -13,21 +13,9 @@ const productsData = [
     link: 'https://mcquizzer.netlify.app/',
   },
   {
-    iconUrl: 'https://placehold.co/128x128/0D9488/F1F5F9?text=P1',
-    name: 'Project Alpha',
-    description: 'A revolutionary tool for data visualization, built with D3.js and React, offering interactive charts and real-time updates.',
-    link: '#',
-  },
-  {
-    iconUrl: 'https://placehold.co/128x128/14B8A6/0F172A?text=P2',
-    name: 'ConnectSphere',
-    description: 'A social networking platform focused on professional growth, featuring a unique mentorship matching algorithm.',
-    link: '#',
-  },
-  {
-    iconUrl: 'https://placehold.co/128x128/334155/F1F5F9?text=P3',
-    name: 'E-Shop Pro',
-    description: 'A complete e-commerce solution with a custom CMS, payment gateway integration, and advanced inventory management.',
+    iconUrl: 'https://placehold.co/128x128/14B8A6/F1F5F9?text=M',
+    name: 'Markuply [Coming Soon]',
+    description: 'The easy HTML builder.',
     link: '#',
   },
 ];
@@ -43,16 +31,19 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ iconUrl, name, description, link }) => (
   <a
     href={link}
-    target="_blank"
+    target={link === '#' ? '_self' : '_blank'}
     rel="noopener noreferrer"
     className="group bg-base-200 p-6 rounded-lg shadow-lg hover:shadow-brand-secondary/20 hover:-translate-y-2 transition-all duration-300 flex flex-col items-start gap-4"
     aria-label={`Visit ${name}`}
+    onClick={(e) => link === '#' && e.preventDefault()}
   >
     <div className="relative">
         <img src={iconUrl} alt={`${name} icon`} className="w-20 h-20 rounded-md object-cover bg-base-300" />
-        <div className="absolute top-1 right-1 bg-base-100/70 p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <ExternalLinkIcon className="h-4 w-4 text-text-primary" />
-        </div>
+        {link !== '#' && (
+          <div className="absolute top-1 right-1 bg-base-100/70 p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <ExternalLinkIcon className="h-4 w-4 text-text-primary" />
+          </div>
+        )}
     </div>
     <div>
         <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
