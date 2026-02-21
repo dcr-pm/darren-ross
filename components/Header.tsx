@@ -1,58 +1,76 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { PersonIcon } from './IconComponents';
+import { MenuIcon, CloseIcon } from './IconComponents';
 
 const Header: React.FC = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const navLinkClasses = ({ isActive }: { isActive: boolean }): string => {
-    const baseClasses = 'px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300';
+    const base = 'px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200';
     return isActive
-      ? `${baseClasses} bg-brand-primary text-white`
-      : `${baseClasses} text-text-secondary hover:bg-base-300 hover:text-text-primary`;
+      ? `${base} bg-brand-500/15 text-brand-400`
+      : `${base} text-surface-300 hover:text-surface-100 hover:bg-surface-800`;
   };
 
+  const mobileNavLinkClasses = ({ isActive }: { isActive: boolean }): string => {
+    const base = 'block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200';
+    return isActive
+      ? `${base} bg-brand-500/15 text-brand-400`
+      : `${base} text-surface-300 hover:text-surface-100 hover:bg-surface-800`;
+  };
+
+  const navItems = [
+    { to: '/about', label: 'About' },
+    { to: '/services', label: 'Services' },
+    { to: '/products', label: 'Products' },
+    { to: '/contact', label: 'Contact' },
+  ];
+
   return (
-    <header className="bg-base-200/80 backdrop-blur-sm sticky top-0 z-50 shadow-md">
-      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="glass sticky top-0 z-50 border-b border-surface-700/50">
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <NavLink to="/about" className="flex-shrink-0 flex items-center gap-2 text-white text-xl font-bold">
-              <PersonIcon className="h-8 w-8 text-brand-secondary" />
-              <span>Darren</span>
-            </NavLink>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink to="/about" className={navLinkClasses}>
-                About Me
-              </NavLink>
-              <NavLink to="/services" className={navLinkClasses}>
-                Services
-              </NavLink>
-              <NavLink to="/products" className={navLinkClasses}>
-                Products
-              </NavLink>
+          <NavLink to="/about" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold text-lg group-hover:bg-brand-400 transition-colors">
+              D
             </div>
+            <span className="text-lg font-bold text-surface-100">Darren Ross</span>
+          </NavLink>
+
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <NavLink key={item.to} to={item.to} className={navLinkClasses}>
+                {item.label}
+              </NavLink>
+            ))}
           </div>
-          <div className="md:hidden">
-             {/* Mobile menu button could go here */}
-          </div>
+
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2 rounded-lg text-surface-400 hover:text-surface-100 hover:bg-surface-800 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+          </button>
         </div>
       </nav>
-       {/* Mobile menu, not shown by default but can be expanded */}
-       <div className="md:hidden border-t border-base-300">
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex justify-around">
-          <NavLink to="/about" className={navLinkClasses}>
-            About Me
-          </NavLink>
-          <NavLink to="/services" className={navLinkClasses}>
-            Services
-          </NavLink>
-          <NavLink to="/products" className={navLinkClasses}>
-            Products
-          </NavLink>
+
+      {mobileOpen && (
+        <div className="md:hidden animate-fade-in-down border-t border-surface-700/50">
+          <div className="px-4 py-3 space-y-1">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={mobileNavLinkClasses}
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 };

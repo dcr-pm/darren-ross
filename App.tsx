@@ -5,10 +5,8 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Services from './components/Services';
 import Products from './components/Products';
+import Contact from './components/Contact';
 
-// Fix for TypeScript error: "Property 'elevenlabs-convai' does not exist on type 'JSX.IntrinsicElements'".
-// The type declaration for this custom element is placed here to ensure it's recognized by the TypeScript compiler,
-// as the original custom.d.ts file may not be included in the build scope.
 declare global {
   namespace JSX {
     interface IntrinsicElements {
@@ -21,15 +19,18 @@ declare global {
 
 const App: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen font-sans">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-8 md:py-16">
-        <Routes>
-          <Route path="/" element={<Navigate to="/about" replace />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/products" element={<Products />} />
-        </Routes>
+      <main className="flex-grow">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+          <Routes>
+            <Route path="/" element={<Navigate to="/about" replace />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
       </main>
       <Footer />
       <elevenlabs-convai agent-id="agent_8901k17b9zxvfp3rey53t7bfg67w"></elevenlabs-convai>

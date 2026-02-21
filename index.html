@@ -3,34 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <meta name="description" content="Darren Ross — Tech Innovator, SFMC Expert, AI Builder, and host of The Prompted Podcast." />
+    <title>Darren Ross — Tech Innovator & Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
             colors: {
-              'brand-primary': '#0D9488', // Teal-600
-              'brand-secondary': '#14B8A6', // Teal-500
-              'base-100': '#0F172A', // Slate-900
-              'base-200': '#1E293B', // Slate-800
-              'base-300': '#334155', // Slate-700
-              'text-primary': '#F1F5F9', // Slate-100
-              'text-secondary': '#94A3B8', // Slate-400
+              'brand': {
+                50: '#EFFEFA',
+                100: '#D0FBF2',
+                200: '#A1F6E5',
+                300: '#6AEAD5',
+                400: '#34D4BF',
+                500: '#14B8A6',
+                600: '#0D9488',
+                700: '#0F766E',
+                800: '#115E59',
+                900: '#134E4A',
+              },
+              'surface': {
+                50: '#F8FAFC',
+                100: '#F1F5F9',
+                200: '#E2E8F0',
+                300: '#CBD5E1',
+                400: '#94A3B8',
+                500: '#64748B',
+                600: '#475569',
+                700: '#334155',
+                800: '#1E293B',
+                900: '#0F172A',
+                950: '#020617',
+              },
             },
             animation: {
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'fade-in': 'fadeIn 0.6s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+              'fade-in-down': 'fadeInDown 0.4s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.6s ease-out forwards',
+              'scale-in': 'scaleIn 0.4s ease-out forwards',
             },
             keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
               fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '0%': { opacity: '0', transform: 'translateY(24px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-12px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(-24px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInRight: {
+                '0%': { opacity: '0', transform: 'translateX(24px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
               },
             },
           },
         },
       }
     </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      .gradient-text {
+        background: linear-gradient(135deg, #14B8A6, #6AEAD5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .glass {
+        background: rgba(30, 41, 59, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px -12px rgba(20, 184, 166, 0.15);
+      }
+      .dot-pattern {
+        background-image: radial-gradient(circle, rgba(148,163,184,0.12) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+    </style>
   <script type="importmap">
 {
   "imports": {
@@ -43,7 +120,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-base-100 text-text-primary">
+  <body class="bg-surface-950 text-surface-100 font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>

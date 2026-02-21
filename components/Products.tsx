@@ -1,62 +1,75 @@
-
 import React from 'react';
 import { ExternalLinkIcon } from './IconComponents';
 
-// --- EDIT THIS SECTION TO ADD/UPDATE YOUR PRODUCTS ---
-// To add an icon, provide a URL to an image. You can use an image hosting service
-// or a placeholder service like https://placehold.co/.
 const productsData = [
   {
-    iconUrl: 'https://placehold.co/128x128/0D9488/F1F5F9?text=MCQ',
+    abbr: 'MC',
     name: 'MarketingCloud Quizzer',
     description: 'An interactive quiz app to test your Marketing Cloud knowledge across various categories and earn a certificate.',
     link: 'https://mcquizzer.netlify.app/',
+    tags: ['React', 'SFMC', 'Quiz'],
+    color: 'from-brand-600 to-brand-400',
   },
   {
-    iconUrl: 'https://placehold.co/128x128/0D9488/F1F5F9?text=P1',
+    abbr: 'PA',
     name: 'Project Alpha',
-    description: 'A revolutionary tool for data visualization, built with D3.js and React, offering interactive charts and real-time updates.',
+    description: 'A data visualization tool built with D3.js and React, offering interactive charts and real-time updates.',
     link: '#',
+    tags: ['D3.js', 'React', 'Data'],
+    color: 'from-blue-600 to-blue-400',
   },
   {
-    iconUrl: 'https://placehold.co/128x128/14B8A6/0F172A?text=P2',
+    abbr: 'CS',
     name: 'ConnectSphere',
     description: 'A social networking platform focused on professional growth, featuring a unique mentorship matching algorithm.',
     link: '#',
+    tags: ['Social', 'Networking', 'AI'],
+    color: 'from-purple-600 to-purple-400',
   },
   {
-    iconUrl: 'https://placehold.co/128x128/334155/F1F5F9?text=P3',
+    abbr: 'ES',
     name: 'E-Shop Pro',
     description: 'A complete e-commerce solution with a custom CMS, payment gateway integration, and advanced inventory management.',
     link: '#',
+    tags: ['E-commerce', 'CMS', 'Payments'],
+    color: 'from-amber-600 to-amber-400',
   },
 ];
-// ----------------------------------------------------
 
 interface ProductCardProps {
-  iconUrl: string;
+  abbr: string;
   name: string;
   description: string;
   link: string;
+  tags: string[];
+  color: string;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ iconUrl, name, description, link }) => (
+const ProductCard: React.FC<ProductCardProps> = ({ abbr, name, description, link, tags, color }) => (
   <a
     href={link}
     target="_blank"
     rel="noopener noreferrer"
-    className="group bg-base-200 p-6 rounded-lg shadow-lg hover:shadow-brand-secondary/20 hover:-translate-y-2 transition-all duration-300 flex flex-col items-start gap-4"
+    className="group bg-surface-900 border border-surface-800 rounded-2xl overflow-hidden card-hover block"
     aria-label={`Visit ${name}`}
   >
-    <div className="relative">
-        <img src={iconUrl} alt={`${name} icon`} className="w-20 h-20 rounded-md object-cover bg-base-300" />
-        <div className="absolute top-1 right-1 bg-base-100/70 p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <ExternalLinkIcon className="h-4 w-4 text-text-primary" />
+    <div className={`h-2 bg-gradient-to-r ${color}`} />
+    <div className="p-6">
+      <div className="flex items-start justify-between mb-4">
+        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
+          <span className="text-white font-bold text-lg">{abbr}</span>
         </div>
-    </div>
-    <div>
-        <h3 className="text-xl font-bold text-white mb-2">{name}</h3>
-        <p className="text-text-secondary leading-relaxed">{description}</p>
+        <ExternalLinkIcon className="h-5 w-5 text-surface-600 group-hover:text-brand-400 transition-colors" />
+      </div>
+      <h3 className="text-lg font-bold text-white mb-2">{name}</h3>
+      <p className="text-surface-400 text-sm leading-relaxed mb-4">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span key={tag} className="text-xs font-medium text-surface-400 bg-surface-800 px-2.5 py-1 rounded-full">
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
   </a>
 );
@@ -65,12 +78,13 @@ const Products: React.FC = () => {
   return (
     <div className="animate-fade-in-up">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white">Products I've Built</h1>
-        <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-          Here are some of the projects I'm proud to have worked on. Click a card to learn more.
+        <p className="text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3">Portfolio</p>
+        <h1 className="text-4xl md:text-5xl font-black text-white mb-4">Products I've Built</h1>
+        <p className="text-lg text-surface-400 max-w-2xl mx-auto">
+          Projects I'm proud to have shipped. Click a card to explore.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
         {productsData.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
