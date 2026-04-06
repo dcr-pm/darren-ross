@@ -38,6 +38,11 @@ async function build() {
         // 4. Write modified index.html to dist
         fs.writeFileSync(path.join(distDir, 'index.html'), html);
 
+        // 5. Copy index.css to dist
+        if (fs.existsSync('index.css')) {
+            fs.copyFileSync('index.css', path.join(distDir, 'index.css'));
+        }
+
         console.log('Build successful! Files are ready in /dist directory.');
     } catch (e) {
         console.error('Build failed:', e);
