@@ -18,13 +18,13 @@ const About: React.FC = () => {
             />
           </div>
           <div className="text-center lg:text-left">
-            <p className="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-3">Technical PM &bull; Builder &bull; Leader</p>
+            <p className="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-3">Technical Project &amp; Product Manager &bull; Builder &bull; Leader</p>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
               I help teams <span className="gradient-text">ship better products</span>
             </h1>
             <p className="max-w-2xl text-lg text-text-secondary leading-relaxed mb-8">
-              Technical Project Manager with deep expertise in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
-              I bridge the gap between business vision and technical execution — driving delivery, removing blockers, and turning complex programs into shipped products.
+              Technical Project &amp; Product Manager with deep expertise in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
+              I bridge the gap between business vision and technical execution — owning both the <em className="text-text-primary not-italic font-semibold">delivery</em> and the <em className="text-text-primary not-italic font-semibold">product strategy</em>, from roadmap to release.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
