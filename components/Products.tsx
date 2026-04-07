@@ -67,7 +67,7 @@ const Passion Projects: React.FC = () => {
         <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-3">Built by Me</p>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white">Passion Projects</h1>
         <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-          Digital products I've designed, built, and shipped — from concept to production.
+          Digital products I've designed, built, and shipped from concept to production.
         </p>
       </div>
 
@@ -81,7 +81,7 @@ const Passion Projects: React.FC = () => {
       <div className="mt-10 text-center">
         <div className="inline-flex items-center gap-3 bg-base-200/50 border border-base-400/30 rounded-xl px-6 py-4">
           <div className="w-3 h-3 bg-brand-accent/60 rounded-full animate-pulse"></div>
-          <p className="text-text-secondary text-sm font-medium">More products in development — stay tuned.</p>
+          <p className="text-text-secondary text-sm font-medium">More products in development. Stay tuned.</p>
         </div>
       </div>
     </div>

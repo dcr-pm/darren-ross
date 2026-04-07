@@ -8,7 +8,7 @@ const Podcast: React.FC = () => {
                 <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-3">Listen & Learn</p>
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white">The Prompted Podcast!</h2>
                 <p className="text-lg text-text-secondary mt-4 max-w-3xl mx-auto">
-                    Exploring the intersections of identity, culture, technology, and purpose — one thoughtful conversation at a time.
+                    Exploring the intersections of identity, culture, technology, and purpose, one thoughtful conversation at a time.
                 </p>
             </div>
 

@@ -24,7 +24,7 @@ const About: React.FC = () => {
             </h1>
             <p className="max-w-2xl text-lg text-text-secondary leading-relaxed mb-8">
               Technical Project &amp; Product Manager with deep expertise in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
-              I bridge the gap between business vision and technical execution — owning both the <em className="text-text-primary not-italic font-semibold">delivery</em> and the <em className="text-text-primary not-italic font-semibold">product strategy</em>, from roadmap to release.
+              I bridge the gap between business vision and technical execution, owning both the <em className="text-text-primary not-italic font-semibold">delivery</em> and the <em className="text-text-primary not-italic font-semibold">product strategy</em>, from roadmap to release.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -74,7 +74,7 @@ const About: React.FC = () => {
             {
               icon: '🎯',
               title: 'Technical Project Management',
-              desc: 'I drive complex technical programs from kickoff to launch — managing scope, timelines, risks, and dependencies across engineering, QA, and stakeholder teams.',
+              desc: 'I drive complex technical programs from kickoff to launch, managing scope, timelines, risks, and dependencies across engineering, QA, and stakeholder teams.',
             },
             {
               icon: '👥',
@@ -84,7 +84,7 @@ const About: React.FC = () => {
             {
               icon: '🤖',
               title: 'AI & Automation',
-              desc: 'I design and build AI-powered tools, voice agents, and workflow automations. From GPT solutions to ElevenLabs integrations — I turn ideas into working products.',
+              desc: 'I design and build AI-powered tools, voice agents, and workflow automations. From GPT solutions to ElevenLabs integrations, I turn ideas into working products.',
             },
           ].map((item, i) => (
             <div key={i} className="card-glow bg-base-200 rounded-xl p-7 hover:-translate-y-1 transition-all duration-300">
@@ -120,7 +120,7 @@ const About: React.FC = () => {
                   <span className="bg-brand-accent/20 text-brand-accent text-xs font-bold px-2.5 py-0.5 rounded-full border border-brand-accent/30 badge-glow">LIVE</span>
                 </div>
                 <p className="text-text-secondary leading-relaxed text-sm">
-                  An interactive study platform for Salesforce Marketing Cloud certifications — quiz yourself across tracks and earn a certificate based on your performance.
+                  An interactive study platform for Salesforce Marketing Cloud certifications. Quiz yourself across tracks and earn a certificate based on your performance.
                 </p>
               </div>
               <ExternalLinkIcon className="h-6 w-6 text-text-muted group-hover:text-brand-accent transition-colors duration-300 flex-shrink-0" />
@@ -139,7 +139,7 @@ const About: React.FC = () => {
         <div className="bg-gradient-to-br from-base-200 to-base-300/50 rounded-2xl p-8 md:p-14 text-center border border-base-400/30">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to build something great?</h2>
           <p className="text-text-secondary max-w-xl mx-auto mb-8 text-lg">
-            Whether you need product leadership, SFMC expertise, or an AI prototype — let's talk.
+            Whether you need product leadership, SFMC expertise, or an AI prototype, let's talk.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a

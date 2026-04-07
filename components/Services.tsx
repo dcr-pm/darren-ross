@@ -34,7 +34,7 @@ const Services: React.FC = () => {
     {
       icon: <MentorshipIcon className="h-7 w-7 text-brand-accent" />,
       title: 'Technical PM Mentorship & Agile Training',
-      description: 'Guided coaching for aspiring PMs in the martech space — sprint planning, capacity balancing, cross-functional team management, and real-world decision-making.',
+      description: 'Guided coaching for aspiring PMs in the martech space. Covers sprint planning, capacity balancing, cross-functional team management, and real-world decision-making.',
       highlights: ['1:1 Coaching Sessions', 'Sprint & Capacity Planning', 'Stakeholder Communication'],
     },
     {
@@ -46,13 +46,13 @@ const Services: React.FC = () => {
     {
       icon: <CertificationIcon className="h-7 w-7 text-brand-accent" />,
       title: 'SFMC Certification Training & Exam Prep',
-      description: 'Guided prep for Salesforce Marketing Cloud certifications (Email Specialist, Consultant, Developer, etc.) — includes tailored study plans, mock exams, concept walkthroughs, and 1:1 mentoring to help you pass with confidence.',
+      description: 'Guided prep for Salesforce Marketing Cloud certifications (Email Specialist, Consultant, Developer, etc.). Includes tailored study plans, mock exams, concept walkthroughs, and 1:1 mentoring to help you pass with confidence.',
       highlights: ['Custom Study Plans', 'Mock Exams & Reviews', '1:1 Mentoring Sessions'],
     },
     {
       icon: <AiChipIcon className="h-7 w-7 text-brand-accent" />,
       title: 'AI Product Building & Prototyping',
-      description: 'From idea to MVP — I help you design and build AI-driven tools, apps, and workflows using platforms like OpenAI, ElevenLabs, and no-code tools like n8n. Ideal for marketing automation, voice agents, AI assistants, and custom GPT solutions.',
+      description: 'From idea to MVP, I help you design and build AI-driven tools, apps, and workflows using platforms like OpenAI, ElevenLabs, and no-code tools like n8n. Ideal for marketing automation, voice agents, AI assistants, and custom GPT solutions.',
       highlights: ['Idea-to-MVP Pipeline', 'AI Agent & Workflow Design', 'Voice & Chat Integrations'],
     },
     {
@@ -64,7 +64,7 @@ const Services: React.FC = () => {
     {
       icon: <RiskIcon className="h-7 w-7 text-brand-accent" />,
       title: 'Process Improvement & Agile Transformation',
-      description: 'I assess your current delivery workflows and implement lean, scalable processes — whether you\'re adopting Agile for the first time or optimizing an existing Scrum/Kanban setup for faster throughput.',
+      description: 'I assess your current delivery workflows and implement lean, scalable processes, whether you\'re adopting Agile for the first time or optimizing an existing Scrum/Kanban setup for faster throughput.',
       highlights: ['Agile Maturity Assessment', 'Sprint Velocity & Workflow Optimization', 'JIRA / Confluence Setup & Best Practices'],
     },
   ];
@@ -75,7 +75,7 @@ const Services: React.FC = () => {
         <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-3">What I Offer</p>
         <h1 className="text-4xl md:text-5xl font-extrabold text-white">Services</h1>
         <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-          From strategy to execution — I help individuals and teams level up in product management, marketing technology, and AI.
+          From strategy to execution, I help individuals and teams level up in product management, marketing technology, and AI.
         </p>
       </div>
 
@@ -89,7 +89,7 @@ const Services: React.FC = () => {
       <div className="mt-14 text-center">
         <div className="bg-base-200/50 rounded-2xl p-8 md:p-10 border border-base-400/30">
           <h2 className="text-2xl font-bold text-white mb-3">Not sure which service fits?</h2>
-          <p className="text-text-secondary mb-6 max-w-lg mx-auto">Let's hop on a quick call. I'll learn about your situation and recommend the best path forward — no pressure.</p>
+          <p className="text-text-secondary mb-6 max-w-lg mx-auto">Let's hop on a quick call. I'll learn about your situation and recommend the best path forward, no pressure.</p>
           <a
             href="mailto:darren@darren-ross.com"
             className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold py-3.5 px-8 rounded-xl text-base hover:bg-brand-secondary transition-all duration-300 hover:shadow-xl hover:shadow-brand-primary/25 hover:-translate-y-0.5"
