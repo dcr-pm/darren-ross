@@ -5,11 +5,20 @@ import { ExternalLinkIcon } from './IconComponents';
 const productsData = [
   {
     gradient: 'from-brand-primary to-brand-accent',
-    initials: 'MCQ',
-    name: 'MarketingCloud Quizzer',
-    description: 'An interactive quiz app to test your Salesforce Marketing Cloud knowledge across various categories. Track your progress and earn a certificate based on your performance.',
-    link: 'https://mcquizzer.netlify.app/',
-    tags: ['React', 'SFMC', 'Education'],
+    initials: 'SFP',
+    name: 'SalesForce Prep Pro',
+    description: 'An interactive quiz and study platform to sharpen your Salesforce Marketing Cloud knowledge. Choose from multiple certification tracks, test yourself across categories, and earn a certificate based on your performance.',
+    link: 'https://www.sfquizzer.com/',
+    tags: ['React', 'Salesforce', 'Certification Prep'],
+    status: 'Live',
+  },
+  {
+    gradient: 'from-purple-500 to-indigo-500',
+    initials: 'TDL',
+    name: "The Dreamer's Log",
+    description: 'A creative dream journaling and sketch app that lets you capture, illustrate, and reflect on your dreams. Turn fleeting nighttime visions into a visual diary you can revisit and explore.',
+    link: 'https://www.thedreamerslog.com/',
+    tags: ['Creative', 'Journaling', 'Sketch App'],
     status: 'Live',
   },
 ];

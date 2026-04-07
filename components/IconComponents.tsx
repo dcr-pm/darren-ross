@@ -58,6 +58,18 @@ export const AiChipIcon: React.FC<{className?: string}> = ({ className }) => (
     </svg>
 );
 
+export const RoadmapIcon: React.FC<{className?: string}> = ({ className }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+    </svg>
+);
+
+export const RiskIcon: React.FC<{className?: string}> = ({ className }) => (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+    </svg>
+);
+
 export const SpotifyIcon: React.FC<{className?: string}> = ({ className }) => (
   <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.237 13.123c-.262.425-.785.562-1.212.3-.96-.562-2.16-1.125-3.562-1.125-1.15 0-2.15.35-2.863.825-.375.25-.862.15-1.112-.225-.25-.375-.15-.862.225-1.112.925-.613 2.162-1.013 3.75-1.013 1.637 0 3.012.637 4.125 1.312.437.263.575.787.3 1.213zm1.187-2.375c-.325.512-.975.687-1.488.362-1.112-.675-2.787-1.375-4.525-1.375-1.35 0-2.613.4-3.563 1-.462.3-.925.075-1.225-.387-.3-.463-.075-.925.387-1.225 1.2-.763 2.763-1.238 4.4-1.238 2.013 0 3.863.787 5.163 1.575.512.312.687.962.363 1.487zm.125-2.438c-1.338-.812-3.488-1.662-5.55-1.662-1.725 0-3.325.488-4.575 1.287-.563.363-1.188.1-1.55-.462-.363-.563-.1-1.188.463-1.55C7.2 6.9 9.075 6.3 11 6.3c2.35 0 4.7.938 6.275 1.887.6.363.813 1.025.45 1.625-.362.6-.987.812-1.587.45z" />

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MentorshipIcon, AuditIcon, CertificationIcon, AiChipIcon } from './IconComponents';
+import { MentorshipIcon, AuditIcon, CertificationIcon, AiChipIcon, RoadmapIcon, RiskIcon } from './IconComponents';
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -54,6 +54,18 @@ const Services: React.FC = () => {
       title: 'AI Product Building & Prototyping',
       description: 'From idea to MVP — I help you design and build AI-driven tools, apps, and workflows using platforms like OpenAI, ElevenLabs, and no-code tools like n8n. Ideal for marketing automation, voice agents, AI assistants, and custom GPT solutions.',
       highlights: ['Idea-to-MVP Pipeline', 'AI Agent & Workflow Design', 'Voice & Chat Integrations'],
+    },
+    {
+      icon: <RoadmapIcon className="h-7 w-7 text-brand-accent" />,
+      title: 'Technical Program & Delivery Management',
+      description: 'End-to-end project delivery for complex technical programs. I manage timelines, dependencies, and cross-team coordination so your engineering org ships on time and on budget.',
+      highlights: ['Program Roadmap & Milestone Planning', 'Dependency & Risk Tracking', 'Vendor & Stakeholder Coordination'],
+    },
+    {
+      icon: <RiskIcon className="h-7 w-7 text-brand-accent" />,
+      title: 'Process Improvement & Agile Transformation',
+      description: 'I assess your current delivery workflows and implement lean, scalable processes — whether you\'re adopting Agile for the first time or optimizing an existing Scrum/Kanban setup for faster throughput.',
+      highlights: ['Agile Maturity Assessment', 'Sprint Velocity & Workflow Optimization', 'JIRA / Confluence Setup & Best Practices'],
     },
   ];
 

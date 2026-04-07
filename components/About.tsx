@@ -18,13 +18,13 @@ const About: React.FC = () => {
             />
           </div>
           <div className="text-center lg:text-left">
-            <p className="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-3">Product Leader &bull; Builder &bull; Coach</p>
+            <p className="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-3">Technical PM &bull; Builder &bull; Leader</p>
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
               I help teams <span className="gradient-text">ship better products</span>
             </h1>
             <p className="max-w-2xl text-lg text-text-secondary leading-relaxed mb-8">
-              Technical Product Manager with deep expertise in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
-              I bridge the gap between business vision and technical execution — turning complex problems into products people love.
+              Technical Project Manager with deep expertise in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
+              I bridge the gap between business vision and technical execution — driving delivery, removing blockers, and turning complex programs into shipped products.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -52,7 +52,7 @@ const About: React.FC = () => {
           {[
             { value: '10+', label: 'Years in Tech' },
             { value: 'SFMC', label: 'Certified Expert' },
-            { value: 'AI', label: 'Product Builder' },
+            { value: 'AI', label: 'Digital Builder' },
             { value: '50+', label: 'Teams Coached' },
           ].map((stat, i) => (
             <div key={i} className="stat-highlight rounded-xl p-5 text-center">
@@ -73,13 +73,13 @@ const About: React.FC = () => {
           {[
             {
               icon: '🎯',
-              title: 'Product Strategy',
-              desc: 'I define roadmaps, prioritize ruthlessly, and align teams around outcomes — not outputs. From discovery to delivery, I own the full product lifecycle.',
+              title: 'Technical Project Management',
+              desc: 'I drive complex technical programs from kickoff to launch — managing scope, timelines, risks, and dependencies across engineering, QA, and stakeholder teams.',
             },
             {
               icon: '👥',
-              title: 'Technical Leadership',
-              desc: 'I lead cross-functional teams of engineers, designers, and stakeholders. I translate business goals into actionable sprints and keep everyone moving forward.',
+              title: 'Cross-Functional Leadership',
+              desc: 'I lead teams of engineers, designers, and business stakeholders. I translate business goals into actionable sprints, remove blockers, and keep delivery on track.',
             },
             {
               icon: '🤖',
@@ -104,23 +104,23 @@ const About: React.FC = () => {
         </div>
         <div className="max-w-3xl mx-auto">
           <a
-            href="https://mcquizzer.netlify.app/"
+            href="https://www.sfquizzer.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="group card-glow block bg-base-200 p-6 md:p-8 rounded-xl hover:-translate-y-1 transition-all duration-300"
-            aria-label="Visit MarketingCloud Quizzer"
+            aria-label="Visit SalesForce Prep Pro"
           >
             <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
               <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
-                MCQ
+                SFP
               </div>
               <div className="flex-grow">
                 <div className="flex items-center gap-3 justify-center sm:justify-start mb-2">
-                  <h3 className="text-xl font-bold text-white">MarketingCloud Quizzer</h3>
+                  <h3 className="text-xl font-bold text-white">SalesForce Prep Pro</h3>
                   <span className="bg-brand-accent/20 text-brand-accent text-xs font-bold px-2.5 py-0.5 rounded-full border border-brand-accent/30 badge-glow">LIVE</span>
                 </div>
                 <p className="text-text-secondary leading-relaxed text-sm">
-                  A quiz app to test your Salesforce Marketing Cloud knowledge. Choose from multiple categories and earn a certificate based on your performance.
+                  An interactive study platform for Salesforce Marketing Cloud certifications — quiz yourself across tracks and earn a certificate based on your performance.
                 </p>
               </div>
               <ExternalLinkIcon className="h-6 w-6 text-text-muted group-hover:text-brand-accent transition-colors duration-300 flex-shrink-0" />

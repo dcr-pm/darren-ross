@@ -29,7 +29,7 @@ const Header: React.FC = () => {
             </div>
             <div className="hidden sm:block">
               <span className="text-white font-bold text-lg">Darren Ross</span>
-              <span className="text-text-muted text-xs block -mt-1">Product Leader</span>
+              <span className="text-text-muted text-xs block -mt-1">Technical Project Manager</span>
             </div>
           </NavLink>
 
