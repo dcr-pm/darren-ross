@@ -23,7 +23,7 @@ const About: React.FC = () => {
               I help teams <span className="gradient-text">ship better products</span>
             </h1>
             <p className="max-w-2xl text-lg text-text-secondary leading-relaxed mb-8">
-              Technical Project &amp; Product Manager with deep expertise in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
+              Technical Project &amp; Product Manager with strong experience in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
               I bridge the gap between business vision and technical execution, owning both the <em className="text-text-primary not-italic font-semibold">delivery</em> and the <em className="text-text-primary not-italic font-semibold">product strategy</em>, from roadmap to release.
             </p>
 
@@ -48,11 +48,12 @@ const About: React.FC = () => {
 
       {/* Proof Bar */}
       <section className="mt-16 md:mt-24 animate-fade-in">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {[
             { value: '10+', label: 'Years in Tech' },
-            { value: 'SFMC', label: 'Certified Expert' },
-            { value: 'AI', label: 'Digital Builder' },
+            { value: 'SFMC', label: 'Certified' },
+            { value: 'TPM', label: 'Tech Project Mgmt' },
+            { value: 'AI', label: 'Product Builder' },
             { value: '50+', label: 'Teams Coached' },
           ].map((stat, i) => (
             <div key={i} className="stat-highlight rounded-xl p-5 text-center">
@@ -139,7 +140,7 @@ const About: React.FC = () => {
         <div className="bg-gradient-to-br from-base-200 to-base-300/50 rounded-2xl p-8 md:p-14 text-center border border-base-400/30">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to build something great?</h2>
           <p className="text-text-secondary max-w-xl mx-auto mb-8 text-lg">
-            Whether you need product leadership, SFMC expertise, or an AI prototype, let's talk.
+            Whether you need product leadership, SFMC knowledge, or an AI prototype, let's talk.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
