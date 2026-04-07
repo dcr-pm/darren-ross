@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center gap-2">
             <NavLink to="/about" className={navLinkClasses}>About</NavLink>
             <NavLink to="/services" className={navLinkClasses}>Services</NavLink>
-            <NavLink to="/products" className={navLinkClasses}>Products</NavLink>
+            <NavLink to="/products" className={navLinkClasses}>Passion Projects</NavLink>
             <a
               href="#contact"
               className="ml-3 px-5 py-2 rounded-lg text-sm font-semibold bg-brand-primary text-white hover:bg-brand-secondary transition-all duration-300 hover:shadow-lg hover:shadow-brand-primary/25"
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
           <div className="px-4 py-4 space-y-2">
             <NavLink to="/about" className={mobileLinkClasses} onClick={() => setMobileOpen(false)}>About</NavLink>
             <NavLink to="/services" className={mobileLinkClasses} onClick={() => setMobileOpen(false)}>Services</NavLink>
-            <NavLink to="/products" className={mobileLinkClasses} onClick={() => setMobileOpen(false)}>Products</NavLink>
+            <NavLink to="/products" className={mobileLinkClasses} onClick={() => setMobileOpen(false)}>Passion Projects</NavLink>
             <a
               href="#contact"
               className="block mt-3 px-4 py-3 rounded-lg text-sm font-semibold text-center bg-brand-primary text-white hover:bg-brand-secondary transition-all duration-300"

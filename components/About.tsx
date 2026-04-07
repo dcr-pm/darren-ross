@@ -39,7 +39,7 @@ const About: React.FC = () => {
                 to="/products"
                 className="inline-flex items-center gap-2 bg-base-300/80 text-text-primary font-bold py-3.5 px-8 rounded-xl text-base hover:bg-base-400/60 transition-all duration-300 border border-base-400/50 hover:-translate-y-0.5"
               >
-                See What I've Built
+                Passion Projects
               </Link>
             </div>
           </div>
@@ -100,7 +100,7 @@ const About: React.FC = () => {
       <section className="mt-20 md:mt-28 animate-fade-in-up">
         <div className="text-center mb-8">
           <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-2">Featured Build</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">Products I've Shipped</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white">Passion Projects</h2>
         </div>
         <div className="max-w-3xl mx-auto">
           <a

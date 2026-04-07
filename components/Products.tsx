@@ -60,12 +60,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ gradient, initials, name, des
   </a>
 );
 
-const Products: React.FC = () => {
+const Passion Projects: React.FC = () => {
   return (
     <div className="animate-fade-in-up">
       <div className="text-center mb-14">
         <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-3">Built by Me</p>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white">Products</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white">Passion Projects</h1>
         <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
           Digital products I've designed, built, and shipped — from concept to production.
         </p>
@@ -88,4 +88,4 @@ const Products: React.FC = () => {
   );
 };
 
-export default Products;
+export default Passion Projects;

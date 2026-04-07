@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-6">
             <NavLink to="/about" className="text-text-muted hover:text-text-primary text-sm transition-colors">About</NavLink>
             <NavLink to="/services" className="text-text-muted hover:text-text-primary text-sm transition-colors">Services</NavLink>
-            <NavLink to="/products" className="text-text-muted hover:text-text-primary text-sm transition-colors">Products</NavLink>
+            <NavLink to="/products" className="text-text-muted hover:text-text-primary text-sm transition-colors">Passion Projects</NavLink>
           </div>
           <div className="flex items-center gap-4">
             <a href="https://linkedin.com/in/darren-ross" target="_blank" rel="noopener noreferrer" className="text-text-muted hover:text-brand-accent transition-colors" aria-label="LinkedIn">
