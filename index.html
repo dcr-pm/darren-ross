@@ -3,28 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Darren Ross — Tech Innovator &amp; Enthusiast</title>
+    <meta name="description" content="Darren Ross — Technical Product Manager, Leadership Coach & Digital Product Builder. SFMC expert helping teams ship better products." />
+    <title>Darren Ross — Product Leader &amp; Digital Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
             colors: {
-              'brand-primary': '#0D9488', // Teal-600
-              'brand-secondary': '#14B8A6', // Teal-500
-              'base-100': '#0F172A', // Slate-900
-              'base-200': '#1E293B', // Slate-800
-              'base-300': '#334155', // Slate-700
-              'text-primary': '#F1F5F9', // Slate-100
-              'text-secondary': '#94A3B8', // Slate-400
+              'brand-primary': '#0D9488',
+              'brand-secondary': '#14B8A6',
+              'brand-accent': '#2DD4BF',
+              'base-100': '#0B1120',
+              'base-200': '#151D2E',
+              'base-300': '#1E293B',
+              'base-400': '#334155',
+              'text-primary': '#F1F5F9',
+              'text-secondary': '#94A3B8',
+              'text-muted': '#64748B',
             },
             animation: {
-              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+              'fade-in': 'fadeIn 0.8s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.6s ease-out forwards',
             },
             keyframes: {
               fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '0%': { opacity: '0', transform: 'translateY(24px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideInLeft: {
+                '0%': { opacity: '0', transform: 'translateX(-24px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
+              },
+              slideInRight: {
+                '0%': { opacity: '0', transform: 'translateX(24px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
               },
             },
           },
@@ -43,7 +68,7 @@
 </script>
 <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-base-100 text-text-primary">
+  <body class="bg-base-100 text-text-primary font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
     <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>

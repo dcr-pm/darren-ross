@@ -13,3 +13,55 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #14B8A6 0%, #2DD4BF 50%, #0D9488 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle glow effect for cards */
+.card-glow {
+  position: relative;
+}
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.3), rgba(45, 212, 191, 0.1), transparent);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card-glow:hover::before {
+  opacity: 1;
+}
+
+/* Stat counter highlight */
+.stat-highlight {
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.15) 0%, rgba(45, 212, 191, 0.05) 100%);
+  border: 1px solid rgba(13, 148, 136, 0.2);
+}
+
+/* Badge styles */
+.badge-glow {
+  box-shadow: 0 0 12px rgba(13, 148, 136, 0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
