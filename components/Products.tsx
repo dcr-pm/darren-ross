@@ -60,7 +60,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ gradient, initials, name, des
   </a>
 );
 
-const Passion Projects: React.FC = () => {
+const Products: React.FC = () => {
   return (
     <div className="animate-fade-in-up">
       <div className="text-center mb-14">
@@ -88,4 +88,4 @@ const Passion Projects: React.FC = () => {
   );
 };
 
-export default Passion Projects;
+export default Products;
