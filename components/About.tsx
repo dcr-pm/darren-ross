@@ -13,7 +13,7 @@ const About: React.FC = () => {
             <div className="absolute -inset-3 bg-gradient-to-br from-brand-primary/30 to-brand-accent/10 rounded-full blur-xl"></div>
             <img
               className="relative rounded-full w-48 h-48 md:w-56 md:h-56 object-cover border-2 border-brand-primary/50 shadow-2xl shadow-brand-primary/20"
-              src="https://picsum.photos/256/256"
+              src="/images/darren-ross.webp"
               alt="Darren Ross"
             />
           </div>

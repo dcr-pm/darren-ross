@@ -43,6 +43,11 @@ async function build() {
             fs.copyFileSync('index.css', path.join(distDir, 'index.css'));
         }
 
+        // 6. Copy images to dist
+        if (fs.existsSync('images')) {
+            fs.cpSync('images', path.join(distDir, 'images'), { recursive: true });
+        }
+
         console.log('Build successful! Files are ready in /dist directory.');
     } catch (e) {
         console.error('Build failed:', e);
