@@ -151,7 +151,7 @@ const About: React.FC = () => {
               Get In Touch
             </a>
             <a
-              href="https://linkedin.com/in/darren-ross"
+              href="https://www.linkedin.com/in/darrenross-pm/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-base-300/80 text-text-primary font-bold py-3.5 px-8 rounded-xl text-base hover:bg-base-400/60 transition-all duration-300 border border-base-400/50 hover:-translate-y-0.5"

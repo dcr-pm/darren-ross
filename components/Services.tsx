@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { MentorshipIcon, AuditIcon, CertificationIcon, AiChipIcon, RoadmapIcon, RiskIcon } from './IconComponents';
+import { MentorshipIcon, AuditIcon, CertificationIcon, AiChipIcon, RoadmapIcon, RiskIcon, ConsultingIcon } from './IconComponents';
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -35,7 +35,7 @@ const Services: React.FC = () => {
       icon: <MentorshipIcon className="h-7 w-7 text-brand-accent" />,
       title: 'Technical PM Mentorship & Agile Training',
       description: 'Guided coaching for aspiring PMs in the martech space. Covers sprint planning, capacity balancing, cross-functional team management, and real-world decision-making.',
-      highlights: ['1:1 Coaching Sessions', 'Sprint & Capacity Planning', 'Stakeholder Communication'],
+      highlights: ['1:1 Coaching Sessions', 'Sprint & Capacity Planning', 'Stakeholder Communication', 'Using AI as a PM'],
     },
     {
       icon: <AuditIcon className="h-7 w-7 text-brand-accent" />,
@@ -52,8 +52,14 @@ const Services: React.FC = () => {
     {
       icon: <AiChipIcon className="h-7 w-7 text-brand-accent" />,
       title: 'AI Product Building & Prototyping',
-      description: 'From idea to MVP, I help you design and build AI-driven tools, apps, and workflows using platforms like OpenAI, ElevenLabs, and no-code tools like n8n. Ideal for marketing automation, voice agents, AI assistants, and custom GPT solutions.',
-      highlights: ['Idea-to-MVP Pipeline', 'AI Agent & Workflow Design', 'Voice & Chat Integrations'],
+      description: 'I design and build AI agents that do real work while a person stays in control of what gets approved. Built with Claude using Claude Code, MCP connections to your tools, and custom skills, plus ElevenLabs voice agents for calls and spoken interactions.',
+      highlights: ['Human-Approved AI Agents', 'Claude Code, MCP & Custom Skills', 'ElevenLabs Voice Agents'],
+    },
+    {
+      icon: <ConsultingIcon className="h-7 w-7 text-brand-accent" />,
+      title: 'AI Enablement for Delivery Teams',
+      description: 'I help delivery teams put AI to work in the tools they already use. That means AI workflows inside Jira and Confluence, sprint and capacity plans that build themselves, and custom AI skills shaped around how your team actually works.',
+      highlights: ['Jira & Confluence AI Workflows', 'Automated Sprint & Capacity Planning', 'Custom AI Skills'],
     },
     {
       icon: <RoadmapIcon className="h-7 w-7 text-brand-accent" />,
@@ -65,7 +71,7 @@ const Services: React.FC = () => {
       icon: <RiskIcon className="h-7 w-7 text-brand-accent" />,
       title: 'Process Improvement & Agile Transformation',
       description: 'I assess your current delivery workflows and implement lean, scalable processes, whether you\'re adopting Agile for the first time or optimizing an existing Scrum/Kanban setup for faster throughput.',
-      highlights: ['Agile Maturity Assessment', 'Sprint Velocity & Workflow Optimization', 'JIRA / Confluence Setup & Best Practices'],
+      highlights: ['Agile Maturity Assessment', 'Sprint Velocity & Workflow Optimization', 'JIRA / Confluence Setup & Best Practices', 'AI-Assisted Agile Workflows'],
     },
   ];
 
