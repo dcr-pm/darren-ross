@@ -10,6 +10,13 @@ const productsData = [
     status: 'Live',
   },
   {
+    name: 'MarkupBuddy',
+    description: 'An AI email builder for marketing and transactional emails. Describe what you want and the AI writes standardized, industry-ready HTML that renders correctly across email service providers. Prefer to do it by hand? Use the drag-and-drop editor, and keep every email on-brand with a built-in brand kit.',
+    link: 'https://markupbuddy.com/',
+    tags: ['AI', 'HTML Email', 'Drag & Drop', 'Brand Kit'],
+    status: 'Live',
+  },
+  {
     name: "The Dreamer's Log",
     description: 'A creative dream journaling and sketch app that lets you capture, illustrate and reflect on your dreams. Turn fleeting nighttime visions into a visual diary you can revisit and explore.',
     link: 'https://www.thedreamerslog.com/',
