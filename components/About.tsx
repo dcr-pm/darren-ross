@@ -22,12 +22,12 @@ const About: React.FC = () => {
       {/* Hero */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end animate-fade-in-up">
         <div className="lg:col-span-7">
-          <p className="eyebrow text-muted mb-6">Technical Project &amp; Product Manager &middot; AI Agent Builder &middot; Coach</p>
+          <p className="eyebrow text-muted mb-6">Technical Project &amp; Product Manager &middot; AI Agent Builder &middot; Speaker</p>
           <h1 className="display text-[3.25rem] sm:text-7xl lg:text-[6.5rem]">
             I help teams ship <em className="italic text-accent">better</em> products.
           </h1>
           <p className="mt-8 max-w-xl text-lg text-ink-2 leading-relaxed">
-            I bridge business vision and technical execution, owning both the delivery and the product strategy, from roadmap to release.
+            I bridge business vision and technical execution, owning both the delivery and the product strategy, from roadmap to release. I bring deep experience in CRM and marketing automation for enterprise clients.
             These days that includes building AI agents that take on real work while people stay in charge of the decisions.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -59,7 +59,7 @@ const About: React.FC = () => {
         <dl className="grid grid-cols-2 md:grid-cols-5">
           {[
             { value: '10+', label: 'Years in tech' },
-            { value: 'SFMC', label: 'Certified' },
+            { value: 'CRM', label: 'Marketing automation' },
             { value: 'TPM', label: 'Technical project mgmt' },
             { value: 'AI', label: 'Agent builder' },
             { value: '50+', label: 'Teams coached' },
@@ -75,11 +75,15 @@ const About: React.FC = () => {
       {/* What I bring */}
       <section className="mt-20 md:mt-28">
         <SectionLabel n="01" label="What I bring" />
-        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
+        <div className="grid sm:grid-cols-2 gap-10 md:gap-x-10 md:gap-y-12">
           {[
             {
               title: 'Technical project management',
               desc: 'I drive complex technical programs from kickoff to launch, managing scope, timelines, risks and dependencies across engineering, QA and stakeholder teams.',
+            },
+            {
+              title: 'CRM & marketing automation',
+              desc: 'I run CRM and marketing automation programs for enterprise clients across the marketing technology stack, including Salesforce, Braze, Adobe and Google Analytics.',
             },
             {
               title: 'Cross-functional leadership',
@@ -132,9 +136,34 @@ const About: React.FC = () => {
         </div>
       </section>
 
+      {/* Speaking & training */}
+      <section className="mt-20 md:mt-28">
+        <SectionLabel n="03" label="Speaking & training" />
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
+          <div className="lg:col-span-6">
+            <h2 className="display text-5xl md:text-6xl">
+              Agentic AI, explained for <em className="italic text-accent">everyone.</em>
+            </h2>
+            <p className="mt-6 text-lg text-ink-2 leading-relaxed max-w-lg">
+              I give talks, workshops and hands-on training on AI agents, in person or online. Every session is built for its audience, from a classroom of young students to a leadership team.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-6">
+              <Link to="/speaking" className="inline-flex items-center gap-2 bg-ink text-paper font-semibold py-3.5 px-7 rounded-full hover:bg-accent transition-colors">
+                Book a talk or workshop <Arrow />
+              </Link>
+            </div>
+          </div>
+          <ul className="lg:col-span-6 grid grid-cols-2 gap-px bg-rule border border-rule self-start">
+            {['Schools & young learners', 'Colleges & universities', 'Small businesses', 'Public sector & nonprofits', 'Companies & teams', 'Events & community groups'].map((a) => (
+              <li key={a} className="bg-paper p-5 font-serif text-lg md:text-xl leading-snug">{a}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Featured project */}
       <section className="mt-20 md:mt-28">
-        <SectionLabel n="03" label="Featured build" />
+        <SectionLabel n="04" label="Featured build" />
         <a
           href="https://www.sfquizzer.com/"
           target="_blank"
@@ -171,7 +200,7 @@ const About: React.FC = () => {
           </h2>
           <div className="md:col-span-4">
             <p className="text-ink-2 mb-6">
-              Whether you need product leadership, SFMC knowledge or an AI agent, let's talk.
+              Whether you need a speaker, product leadership, CRM and marketing automation expertise or an AI agent, let's talk.
             </p>
             <a
               href={CONTACT_URL}

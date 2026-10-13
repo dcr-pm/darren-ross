@@ -6,6 +6,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Products from './components/Products';
 import Agents from './components/Agents';
+import Speaking from './components/Speaking';
 
 // Fix for TypeScript error: "Property 'elevenlabs-convai' does not exist on type 'JSX.IntrinsicElements'".
 // The type declaration for this custom element is placed here to ensure it's recognized by the TypeScript compiler,
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/agents" element={<Agents />} />
+          <Route path="/speaking" element={<Speaking />} />
           <Route path="/products" element={<Products />} />
         </Routes>
       </main>

@@ -5,7 +5,7 @@ const Podcast: React.FC = () => {
     return (
         <section id="podcast" className="scroll-mt-24">
             <div className="flex items-center gap-4 mb-10">
-                <span className="eyebrow text-accent">04</span>
+                <span className="eyebrow text-accent">05</span>
                 <span className="eyebrow text-muted">Listen &amp; learn</span>
                 <span className="flex-1 h-px bg-rule" />
             </div>

@@ -9,9 +9,19 @@ interface Service {
 
 const services: Service[] = [
   {
+    title: 'Agentic AI Speaking & Training',
+    description: 'Talks, workshops and hands-on training on AI agents for schools, small businesses, public organizations, companies and community groups. In person or online, and pitched at the right level for the room, from young students to leadership teams.',
+    highlights: ['Keynotes & Talks', 'Hands-On Workshops', 'Team Training Series', 'In Person or Online', 'All Ages & Audiences'],
+  },
+  {
     title: 'AI Product Building & Prototyping',
     description: 'I design and build AI agents that do real work while a person stays in control of what gets approved. Built with Claude using Claude Code, MCP connections to your tools, and custom skills, plus ElevenLabs voice agents for calls and spoken interactions.',
     highlights: ['Human-Approved AI Agents', 'Claude Code, MCP & Custom Skills', 'ElevenLabs Voice Agents'],
+  },
+  {
+    title: 'CRM & Marketing Automation for Enterprise',
+    description: 'I help enterprise clients plan, build and run CRM and marketing automation programs that actually connect. That covers journeys, segmentation, data and reporting across the marketing technology stack, including Salesforce, Braze, Adobe and Google Analytics, plus audits that show what to fix first.',
+    highlights: ['Journey & Campaign Automation', 'CRM Data & Segmentation', 'Salesforce, Braze, Adobe & Google Analytics', 'Platform Audits & Roadmaps'],
   },
   {
     title: 'AI Enablement for Delivery Teams',
@@ -34,14 +44,9 @@ const services: Service[] = [
     highlights: ['1:1 Coaching Sessions', 'Sprint & Capacity Planning', 'Stakeholder Communication', 'Using AI as a PM'],
   },
   {
-    title: 'SFMC Audit & Optimization Report',
-    description: 'A deep-dive analysis of your current SFMC setup with clear recommendations to improve performance and reduce friction.',
-    highlights: ['Full Platform Health Check', 'Data Architecture Review', 'Actionable Roadmap'],
-  },
-  {
-    title: 'SFMC Certification Training & Exam Prep',
-    description: 'Guided prep for Salesforce Marketing Cloud certifications (Email Specialist, Consultant, Developer and more). Includes tailored study plans, mock exams, concept walkthroughs and 1:1 mentoring to help you pass with confidence.',
-    highlights: ['Custom Study Plans', 'Mock Exams & Reviews', '1:1 Mentoring Sessions'],
+    title: 'CRM & Marketing Automation Training',
+    description: 'Hands-on training and certification prep for the platforms behind CRM and marketing automation, such as Salesforce, Braze and Adobe. Includes tailored study plans, mock exams, concept walkthroughs and 1:1 mentoring.',
+    highlights: ['Platform Training', 'Certification Prep & Mock Exams', '1:1 Mentoring Sessions'],
   },
 ];
 
@@ -54,7 +59,7 @@ const Services: React.FC = () => {
           <h1 className="display text-6xl md:text-8xl">Services</h1>
         </div>
         <p className="md:col-span-4 text-lg text-ink-2 leading-relaxed">
-          From strategy to execution, I help people and teams level up in product management, marketing technology and AI.
+          From strategy to execution, and from the classroom to the boardroom, I help people and teams level up in product management, CRM and marketing automation, and AI.
         </p>
       </header>
 

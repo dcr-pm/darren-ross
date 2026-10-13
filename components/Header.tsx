@@ -5,6 +5,7 @@ import { CONTACT_URL } from './contact';
 const links = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
+  { to: '/speaking', label: 'Speaking' },
   { to: '/agents', label: 'AI Agents' },
   { to: '/products', label: 'Projects' },
 ];
@@ -21,7 +22,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <NavLink to="/about" className="flex items-baseline gap-3" onClick={() => setMobileOpen(false)}>
             <span className="font-serif text-xl font-medium tracking-tight">Darren Ross</span>
-            <span className="hidden sm:inline eyebrow text-muted">Technical PM &amp; AI Builder</span>
+            <span className="hidden lg:inline eyebrow text-muted">Technical PM &amp; AI Builder</span>
           </NavLink>
 
           <div className="hidden md:flex items-center gap-8">

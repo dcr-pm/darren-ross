@@ -24,6 +24,7 @@ const Footer: React.FC = () => {
               <p className="eyebrow text-paper/60">Pages</p>
               <NavLink to="/about" className="block text-sm hover:text-accent-soft">About</NavLink>
               <NavLink to="/services" className="block text-sm hover:text-accent-soft">Services</NavLink>
+              <NavLink to="/speaking" className="block text-sm hover:text-accent-soft">Speaking</NavLink>
               <NavLink to="/agents" className="block text-sm hover:text-accent-soft">AI Agents</NavLink>
               <NavLink to="/products" className="block text-sm hover:text-accent-soft">Projects</NavLink>
             </div>
