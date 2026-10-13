@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { ExternalLinkIcon } from './IconComponents';
 
 const productsData = [
   {
-    gradient: 'from-brand-primary to-brand-accent',
-    initials: 'SFP',
     name: 'SalesForce Prep Pro',
     description: 'An interactive quiz and study platform to sharpen your Salesforce Marketing Cloud knowledge. Choose from multiple certification tracks, test yourself across categories, and earn a certificate based on your performance.',
     link: 'https://www.sfquizzer.com/',
@@ -13,77 +10,62 @@ const productsData = [
     status: 'Live',
   },
   {
-    gradient: 'from-purple-500 to-indigo-500',
-    initials: 'TDL',
     name: "The Dreamer's Log",
-    description: 'A creative dream journaling and sketch app that lets you capture, illustrate, and reflect on your dreams. Turn fleeting nighttime visions into a visual diary you can revisit and explore.',
+    description: 'A creative dream journaling and sketch app that lets you capture, illustrate and reflect on your dreams. Turn fleeting nighttime visions into a visual diary you can revisit and explore.',
     link: 'https://www.thedreamerslog.com/',
     tags: ['Creative', 'Journaling', 'Sketch App'],
     status: 'Live',
   },
 ];
 
-interface ProductCardProps {
-  gradient: string;
-  initials: string;
-  name: string;
-  description: string;
-  link: string;
-  tags: string[];
-  status: string;
-}
-
-const ProductCard: React.FC<ProductCardProps> = ({ gradient, initials, name, description, link, tags, status }) => (
-  <a
-    href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group card-glow bg-base-200 rounded-xl p-8 hover:-translate-y-1 transition-all duration-300 flex flex-col"
-    aria-label={`Visit ${name}`}
-  >
-    <div className="flex items-start justify-between mb-5">
-      <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${gradient} flex items-center justify-center text-white text-lg font-bold shadow-lg`}>
-        {initials}
-      </div>
-      <div className="flex items-center gap-2">
-        <span className="bg-brand-accent/15 text-brand-accent text-xs font-bold px-2.5 py-1 rounded-full border border-brand-accent/25">{status}</span>
-        <ExternalLinkIcon className="h-5 w-5 text-text-muted group-hover:text-brand-accent transition-colors duration-300" />
-      </div>
-    </div>
-    <h3 className="text-xl font-bold text-white mb-3">{name}</h3>
-    <p className="text-text-secondary leading-relaxed text-sm mb-5 flex-grow">{description}</p>
-    <div className="flex flex-wrap gap-2">
-      {tags.map((tag, i) => (
-        <span key={i} className="text-xs font-medium text-text-muted bg-base-300/80 px-3 py-1 rounded-full">{tag}</span>
-      ))}
-    </div>
-  </a>
-);
-
 const Products: React.FC = () => {
   return (
     <div className="animate-fade-in-up">
-      <div className="text-center mb-14">
-        <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-3">Built by Me</p>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white">Passion Projects</h1>
-        <p className="text-lg text-text-secondary mt-4 max-w-2xl mx-auto">
-          Digital products I've designed, built, and shipped from concept to production.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {productsData.map((product, index) => (
-          <ProductCard key={index} {...product} />
-        ))}
-      </div>
-
-      {/* More Coming Soon */}
-      <div className="mt-10 text-center">
-        <div className="inline-flex items-center gap-3 bg-base-200/50 border border-base-400/30 rounded-xl px-6 py-4">
-          <div className="w-3 h-3 bg-brand-accent/60 rounded-full animate-pulse"></div>
-          <p className="text-text-secondary text-sm font-medium">More products in development. Stay tuned.</p>
+      <header className="grid md:grid-cols-12 gap-8 items-end pb-12 border-b border-ink">
+        <div className="md:col-span-8">
+          <p className="eyebrow text-muted mb-6">Built by me</p>
+          <h1 className="display text-6xl md:text-8xl">Projects</h1>
         </div>
-      </div>
+        <p className="md:col-span-4 text-lg text-ink-2 leading-relaxed">
+          Digital products I've designed, built and shipped from concept to production.
+        </p>
+      </header>
+
+      <ol>
+        {productsData.map((p, i) => (
+          <li key={p.name} className="border-b border-rule">
+            <a
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group row-hover grid md:grid-cols-12 gap-4 md:gap-8 py-10 px-2 md:px-4"
+              aria-label={`Visit ${p.name}`}
+            >
+              <span className="md:col-span-1 font-mono text-sm text-accent pt-3">{String(i + 1).padStart(2, '0')}</span>
+              <div className="md:col-span-4">
+                <span className="eyebrow text-muted">{p.status}</span>
+                <h2 className="display text-4xl mt-2">{p.name}</h2>
+              </div>
+              <div className="md:col-span-6">
+                <p className="text-ink-2 leading-relaxed">{p.description}</p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {p.tags.map((t) => (
+                    <li key={t} className="text-xs font-medium border border-rule rounded-full px-3 py-1.5 text-ink-2 bg-paper">{t}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="md:col-span-1 flex md:justify-end pt-2">
+                <ExternalLinkIcon className="h-6 w-6 text-muted group-hover:text-accent transition-colors" />
+              </div>
+            </a>
+          </li>
+        ))}
+      </ol>
+
+      <p className="mt-10 flex items-center gap-3 text-sm text-muted">
+        <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+        More products in development.
+      </p>
     </div>
   );
 };

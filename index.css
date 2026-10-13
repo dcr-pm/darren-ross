@@ -10,58 +10,79 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: #F5F2EC;
+  color: #141414;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
 }
 
-/* Gradient text utility */
-.gradient-text {
-  background: linear-gradient(135deg, #14B8A6 0%, #2DD4BF 50%, #0D9488 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+::selection {
+  background: #C2410C;
+  color: #F5F2EC;
 }
 
-/* Subtle glow effect for cards */
-.card-glow {
-  position: relative;
-}
-.card-glow::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgba(13, 148, 136, 0.3), rgba(45, 212, 191, 0.1), transparent);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.card-glow:hover::before {
-  opacity: 1;
+/* Display type */
+.display {
+  font-family: Fraunces, Georgia, serif;
+  font-variation-settings: "opsz" 144;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
 }
 
-/* Stat counter highlight */
-.stat-highlight {
-  background: linear-gradient(135deg, rgba(13, 148, 136, 0.15) 0%, rgba(45, 212, 191, 0.05) 100%);
-  border: 1px solid rgba(13, 148, 136, 0.2);
+/* Small uppercase label */
+.eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
-/* Badge styles */
-.badge-glow {
-  box-shadow: 0 0 12px rgba(13, 148, 136, 0.3);
+/* Animated underline for text links */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+.link-underline:hover,
+.link-underline:focus-visible {
+  background-size: 100% 1px;
+}
+
+/* Row that reveals an accent bar on hover */
+.row-hover {
+  transition: background-color 0.25s ease;
+}
+.row-hover:hover {
+  background-color: #ECE7DE;
+}
+
+:focus-visible {
+  outline: 2px solid #C2410C;
+  outline-offset: 3px;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0B1120;
+  background: #F5F2EC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 3px;
+  background: #D9D2C5;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #6B655D;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -2,162 +2,184 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Podcast from './Podcast';
 import { ExternalLinkIcon } from './IconComponents';
+import { CONTACT_URL, CONTACT_LABEL } from './contact';
+
+const Arrow: React.FC<{ className?: string }> = ({ className = 'w-4 h-4' }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M5 12h14m-5-5l5 5-5 5" /></svg>
+);
+
+const SectionLabel: React.FC<{ n: string; label: string }> = ({ n, label }) => (
+  <div className="flex items-center gap-4 mb-10">
+    <span className="eyebrow text-accent">{n}</span>
+    <span className="eyebrow text-muted">{label}</span>
+    <span className="flex-1 h-px bg-rule" />
+  </div>
+);
 
 const About: React.FC = () => {
   return (
     <>
-      {/* Hero Section */}
-      <section className="animate-fade-in-up py-4 md:py-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          <div className="flex-shrink-0 relative">
-            <div className="absolute -inset-3 bg-gradient-to-br from-brand-primary/30 to-brand-accent/10 rounded-full blur-xl"></div>
-            <img
-              className="relative rounded-full w-48 h-48 md:w-56 md:h-56 object-cover border-2 border-brand-primary/50 shadow-2xl shadow-brand-primary/20"
-              src="/images/darren-ross.webp"
-              alt="Darren Ross"
-            />
-          </div>
-          <div className="text-center lg:text-left">
-            <p className="text-brand-accent font-semibold tracking-widest uppercase text-sm mb-3">Technical Project &amp; Product Manager &bull; Builder &bull; Leader</p>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
-              I help teams <span className="gradient-text">ship better products</span>
-            </h1>
-            <p className="max-w-2xl text-lg text-text-secondary leading-relaxed mb-8">
-              Technical Project &amp; Product Manager with strong experience in Salesforce Marketing Cloud, AI-driven solutions, and cross-functional leadership.
-              I bridge the gap between business vision and technical execution, owning both the <em className="text-text-primary not-italic font-semibold">delivery</em> and the <em className="text-text-primary not-italic font-semibold">product strategy</em>, from roadmap to release.
-            </p>
-
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold py-3.5 px-8 rounded-xl text-base hover:bg-brand-secondary transition-all duration-300 hover:shadow-xl hover:shadow-brand-primary/25 hover:-translate-y-0.5"
-              >
-                View Services
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 bg-base-300/80 text-text-primary font-bold py-3.5 px-8 rounded-xl text-base hover:bg-base-400/60 transition-all duration-300 border border-base-400/50 hover:-translate-y-0.5"
-              >
-                Passion Projects
-              </Link>
-            </div>
+      {/* Hero */}
+      <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-end animate-fade-in-up">
+        <div className="lg:col-span-7">
+          <p className="eyebrow text-muted mb-6">Technical Project &amp; Product Manager &middot; AI Agent Builder &middot; Coach</p>
+          <h1 className="display text-[3.25rem] sm:text-7xl lg:text-[6.5rem]">
+            I help teams ship <em className="italic text-accent">better</em> products.
+          </h1>
+          <p className="mt-8 max-w-xl text-lg text-ink-2 leading-relaxed">
+            I bridge business vision and technical execution, owning both the delivery and the product strategy, from roadmap to release.
+            These days that includes building AI agents that take on real work while people stay in charge of the decisions.
+          </p>
+          <div className="mt-10 flex flex-wrap items-center gap-6">
+            <Link to="/services" className="inline-flex items-center gap-2 bg-ink text-paper font-semibold py-3.5 px-7 rounded-full hover:bg-accent transition-colors">
+              View services <Arrow />
+            </Link>
+            <Link to="/agents" className="inline-flex items-center gap-2 font-semibold text-ink link-underline">
+              How I build AI agents <Arrow />
+            </Link>
           </div>
         </div>
+        <figure className="lg:col-span-5 min-w-0">
+          <img
+            className="block w-full h-auto max-w-sm lg:max-w-none mx-auto aspect-[4/5] object-cover grayscale"
+            src="/images/darren-ross.webp"
+            alt="Portrait of Darren Ross"
+            width={640}
+            height={843}
+          />
+          <figcaption className="mt-3 flex justify-between eyebrow text-muted max-w-sm lg:max-w-none mx-auto">
+            <span>Darren Ross</span>
+            <span>Technical PM &amp; AI Builder</span>
+          </figcaption>
+        </figure>
       </section>
 
-      {/* Proof Bar */}
-      <section className="mt-16 md:mt-24 animate-fade-in">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {/* Proof bar */}
+      <section className="mt-20 md:mt-28 border-y border-rule animate-fade-in">
+        <dl className="grid grid-cols-2 md:grid-cols-5">
           {[
-            { value: '10+', label: 'Years in Tech' },
+            { value: '10+', label: 'Years in tech' },
             { value: 'SFMC', label: 'Certified' },
-            { value: 'TPM', label: 'Tech Project Mgmt' },
-            { value: 'AI', label: 'Product Builder' },
-            { value: '50+', label: 'Teams Coached' },
+            { value: 'TPM', label: 'Technical project mgmt' },
+            { value: 'AI', label: 'Agent builder' },
+            { value: '50+', label: 'Teams coached' },
           ].map((stat, i) => (
-            <div key={i} className="stat-highlight rounded-xl p-5 text-center">
-              <div className="text-2xl md:text-3xl font-extrabold text-brand-accent">{stat.value}</div>
-              <div className="text-text-muted text-sm font-medium mt-1">{stat.label}</div>
+            <div key={i} className={`flex flex-col-reverse justify-end py-7 px-4 md:px-6 border-rule ${i % 2 === 0 && i < 4 ? 'border-r' : ''} ${i < 4 ? 'md:border-r' : 'col-span-2 md:col-span-1'} ${i >= 2 ? 'border-t md:border-t-0' : ''}`}>
+              <dt className="eyebrow text-muted mt-2">{stat.label}</dt>
+              <dd className="display text-4xl md:text-5xl">{stat.value}</dd>
             </div>
           ))}
-        </div>
+        </dl>
       </section>
 
-      {/* What I Do */}
-      <section className="mt-20 md:mt-28 animate-fade-in-up">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">What I Bring to the Table</h2>
-          <p className="text-text-secondary mt-3 max-w-xl mx-auto">Leadership, technical depth, and a bias for shipping.</p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
+      {/* What I bring */}
+      <section className="mt-20 md:mt-28">
+        <SectionLabel n="01" label="What I bring" />
+        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
           {[
             {
-              icon: '🎯',
-              title: 'Technical Project Management',
-              desc: 'I drive complex technical programs from kickoff to launch, managing scope, timelines, risks, and dependencies across engineering, QA, and stakeholder teams.',
+              title: 'Technical project management',
+              desc: 'I drive complex technical programs from kickoff to launch, managing scope, timelines, risks and dependencies across engineering, QA and stakeholder teams.',
             },
             {
-              icon: '👥',
-              title: 'Cross-Functional Leadership',
-              desc: 'I lead teams of engineers, designers, and business stakeholders. I translate business goals into actionable sprints, remove blockers, and keep delivery on track.',
+              title: 'Cross-functional leadership',
+              desc: 'I lead engineers, designers and business stakeholders. I turn business goals into sprints people can act on, remove blockers and keep delivery on track.',
             },
             {
-              icon: '🤖',
-              title: 'AI & Automation',
-              desc: 'I design and build AI-powered tools, voice agents, and workflow automations. From GPT solutions to ElevenLabs integrations, I turn ideas into working products.',
+              title: 'AI agents & automation',
+              desc: 'I build AI agents with Claude, MCP and custom skills, plus ElevenLabs voice agents. Each one does real work and checks with a person before anything important happens.',
             },
           ].map((item, i) => (
-            <div key={i} className="card-glow bg-base-200 rounded-xl p-7 hover:-translate-y-1 transition-all duration-300">
-              <div className="text-3xl mb-4">{item.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-text-secondary leading-relaxed text-sm">{item.desc}</p>
+            <div key={i} className="border-t border-ink pt-6">
+              <h3 className="font-serif text-2xl leading-snug mb-3">{item.title}</h3>
+              <p className="text-ink-2 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Featured Product */}
-      <section className="mt-20 md:mt-28 animate-fade-in-up">
-        <div className="text-center mb-8">
-          <p className="text-brand-accent font-semibold tracking-widest uppercase text-xs mb-2">Featured Build</p>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">Passion Projects</h2>
-        </div>
-        <div className="max-w-3xl mx-auto">
-          <a
-            href="https://www.sfquizzer.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group card-glow block bg-base-200 p-6 md:p-8 rounded-xl hover:-translate-y-1 transition-all duration-300"
-            aria-label="Visit SalesForce Prep Pro"
-          >
-            <div className="flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
-              <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-brand-primary to-brand-accent flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
-                SFP
-              </div>
-              <div className="flex-grow">
-                <div className="flex items-center gap-3 justify-center sm:justify-start mb-2">
-                  <h3 className="text-xl font-bold text-white">SalesForce Prep Pro</h3>
-                  <span className="bg-brand-accent/20 text-brand-accent text-xs font-bold px-2.5 py-0.5 rounded-full border border-brand-accent/30 badge-glow">LIVE</span>
+      {/* AI agents feature */}
+      <section className="mt-20 md:mt-28 -mx-4 sm:-mx-6 lg:-mx-8 bg-ink text-paper px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        <div className="grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-5">
+            <p className="eyebrow text-accent-soft mb-6">02 &middot; AI agentic development</p>
+            <h2 className="display text-5xl md:text-6xl">
+              AI does the work. <em className="italic text-accent-soft">You</em> make the call.
+            </h2>
+            <p className="mt-6 text-paper/75 text-lg leading-relaxed max-w-md">
+              I design agents that handle the repetitive parts of a job, connect to the tools a team already uses, and stop for a human at every step that matters.
+            </p>
+            <Link to="/agents" className="mt-8 inline-flex items-center gap-2 bg-paper text-ink font-semibold py-3.5 px-7 rounded-full hover:bg-accent-soft transition-colors">
+              See how it works <Arrow />
+            </Link>
+          </div>
+          <ol className="lg:col-span-7 lg:pl-10 space-y-0">
+            {[
+              { t: 'Map the work', d: 'We pick one repetitive task and write down exactly how it gets done today, including where judgment is needed.' },
+              { t: 'Build the agent', d: 'Claude Code, MCP connections and custom skills give the agent access to the right tools and nothing more.' },
+              { t: 'Keep a human in the loop', d: 'The agent drafts, prepares and proposes. A person reviews and approves before anything is sent or changed.' },
+              { t: 'Hand it over', d: 'You get a working agent, clear documentation and a team that knows how to run it.' },
+            ].map((s, i) => (
+              <li key={i} className="grid grid-cols-[3rem_1fr] gap-4 py-6 border-t border-paper/15 first:border-t-0 lg:first:border-t">
+                <span className="font-mono text-sm text-accent-soft pt-1">{String(i + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3 className="font-serif text-2xl mb-1">{s.t}</h3>
+                  <p className="text-paper/70 leading-relaxed">{s.d}</p>
                 </div>
-                <p className="text-text-secondary leading-relaxed text-sm">
-                  An interactive study platform for Salesforce Marketing Cloud certifications. Quiz yourself across tracks and earn a certificate based on your performance.
-                </p>
-              </div>
-              <ExternalLinkIcon className="h-6 w-6 text-text-muted group-hover:text-brand-accent transition-colors duration-300 flex-shrink-0" />
-            </div>
-          </a>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
-      <hr className="my-16 md:my-24 border-base-300/50" />
+      {/* Featured project */}
+      <section className="mt-20 md:mt-28">
+        <SectionLabel n="03" label="Featured build" />
+        <a
+          href="https://www.sfquizzer.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group row-hover grid md:grid-cols-12 gap-6 items-center border-y border-rule py-8 px-2 md:px-4"
+          aria-label="Visit SalesForce Prep Pro"
+        >
+          <div className="md:col-span-4">
+            <span className="eyebrow text-accent">Live</span>
+            <h3 className="display text-4xl mt-2">SalesForce Prep Pro</h3>
+          </div>
+          <p className="md:col-span-6 text-ink-2 leading-relaxed">
+            An interactive study platform for Salesforce Marketing Cloud certifications. Quiz yourself across tracks and earn a certificate based on your performance.
+          </p>
+          <div className="md:col-span-2 flex md:justify-end">
+            <ExternalLinkIcon className="h-6 w-6 text-muted group-hover:text-accent transition-colors" />
+          </div>
+        </a>
+        <Link to="/products" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold link-underline">
+          All projects <Arrow />
+        </Link>
+      </section>
 
       {/* Podcast */}
-      <Podcast />
+      <div className="mt-20 md:mt-28">
+        <Podcast />
+      </div>
 
-      {/* Contact CTA */}
-      <section id="contact" className="mt-20 md:mt-28 mb-8 animate-fade-in-up scroll-mt-20">
-        <div className="bg-gradient-to-br from-base-200 to-base-300/50 rounded-2xl p-8 md:p-14 text-center border border-base-400/30">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">Ready to build something great?</h2>
-          <p className="text-text-secondary max-w-xl mx-auto mb-8 text-lg">
-            Whether you need product leadership, SFMC knowledge, or an AI prototype, let's talk.
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+      {/* Contact */}
+      <section id="contact" className="mt-20 md:mt-28 scroll-mt-24 border-t border-ink pt-12">
+        <div className="grid md:grid-cols-12 gap-8 items-end">
+          <h2 className="md:col-span-8 display text-5xl md:text-6xl">
+            Ready to build something <em className="italic text-accent">great?</em>
+          </h2>
+          <div className="md:col-span-4">
+            <p className="text-ink-2 mb-6">
+              Whether you need product leadership, SFMC knowledge or an AI agent, let's talk.
+            </p>
             <a
-              href="mailto:darren@darren-ross.com"
-              className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold py-3.5 px-8 rounded-xl text-base hover:bg-brand-secondary transition-all duration-300 hover:shadow-xl hover:shadow-brand-primary/25 hover:-translate-y-0.5"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-              Get In Touch
-            </a>
-            <a
-              href="https://www.linkedin.com/in/darrenross-pm/"
+              href={CONTACT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-base-300/80 text-text-primary font-bold py-3.5 px-8 rounded-xl text-base hover:bg-base-400/60 transition-all duration-300 border border-base-400/50 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-ink text-paper font-semibold py-3.5 px-7 rounded-full hover:bg-accent transition-colors"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
+              {CONTACT_LABEL} <Arrow />
             </a>
           </div>
         </div>
